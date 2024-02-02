@@ -12,10 +12,11 @@ body{
 
 header.navbar-container{
     width: 100%;
+    max-width: 1200px;
     background-color: #393E46;
     margin-inline: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -43,4 +44,59 @@ header.navbar-container .nav-list li a{
 
 header.navbar-container .nav-list li:hover a{
     background-color: #222831;
+}
+
+main{
+    flex: 1;
+    width: 80%;
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    color: #222831;
+}
+
+main div.introduction   {
+    width: 500%;
+    margin-right: 10px;
+    justify-content: center;
+    background-color: #EEEEEE;
+    padding: 20px;
+}
+
+main .introduction .introduction-image{
+    flex: 1;
+    display: flex;
+}
+
+main .introduction .introduction-image img{
+    width: 250px;
+    margin: auto;
+}
+
+main aside {
+    padding: 20px;
+    max-height: 500px;
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: #EEEEEE;
+}
+
+main aside .profile .social-media ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+main aside .profile .social-media li {
+    list-style-type: none;
+}
+
+footer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #222831;
+    color: #EEEEEE;
 }
