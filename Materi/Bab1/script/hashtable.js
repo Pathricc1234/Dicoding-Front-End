@@ -5,9 +5,9 @@ const eliminasiContent = {
 }
 
 const graphContent = {
-    first: "",
-    second: "",
-    third: "",
+    first: "Pertama, kita mencari titik potong untuk kedua sumbu x dan y, sehingga kita bisa memiliki titik yang menghubungkan kedua garis sehingga persamaannya menjadi lebih akurat.img/grafik/point.png",
+    second: "Setelah mendapatkan kedua titik, kita menandainya pada koordinat kartesian, langkah berikutnya adalah menghubungkan kedua titik tersebut untuk membentuk sebuah garis persamaan linear.img/grafik/graph.png",
+    third: "Terakhir, kita mencari titik potong dari kedua grafik dan mencatat hasilnya untuk mendapatkan solusi.img/grafik/result.png",
 }
 
 const gaussContent = {
@@ -29,13 +29,19 @@ const eliminationMap = new Map([
 ]);
 
 const graphMap = new Map([
-
+    ["first", graphContent.first],
+    ["second", graphContent.second],
+    ["third", graphContent.third]
 ]);
 
 const gaussMap = new Map([
-
+    ["first", gaussContent.first],
+    ["second", gaussContent.second],
+    ["third", gaussContent.third]
 ]);
 
 const gaussJordanMap = new Map([
-    
+    ["first",gaussJordanContent.first],
+    ["second", gaussJordanContent.second],
+    ["third", gaussJordanContent.third]
 ]);
