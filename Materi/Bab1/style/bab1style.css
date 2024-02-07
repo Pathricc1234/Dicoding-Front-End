@@ -105,6 +105,10 @@ main .main-article .penyelesaian-perlinier .exp-img{
     justify-content: center;
 }
 
+main .main-article .penyelesaian-perlinier .exp-img img{
+    width: 250px;
+}
+
 /*Metode Eliminasi*/
 main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi{
     max-height: 400px;
@@ -132,7 +136,7 @@ main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-e
     background-color: #393E46;
 }
 
-main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul .first{
+main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul #first-elim{
     border-radius: 10px 0px 0px 0px;
 }
 
@@ -141,8 +145,14 @@ main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-e
 }
 
 main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi .ilus-img{
+    max-height: 300px;
+    padding: 30px;
     display: flex;
     justify-content: center;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi .ilus-img img{
+    border-radius: 20px;
 }
 
 /*Metode Grafik*/
