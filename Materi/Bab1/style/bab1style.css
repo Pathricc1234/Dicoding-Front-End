@@ -3,17 +3,20 @@
 }
 
 body{
+    background-color: #222831;
     font-family: 'Tinos', serif;
+    color: #EEEEEE;
     font-size: 1.05rem;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
+/*Navbar*/
 header.navbar-container{
     width: 100%;
     max-width: 1200px;
-    background-color: #393E46;
+    background-color: #222831;
     margin-inline: auto;
     display: flex;
     justify-content: center;
@@ -43,10 +46,288 @@ header.navbar-container .nav-list li a{
 }
 
 header.navbar-container .nav-list li:hover a{
-    background-color: #222831;
+    background-color: #393E46;
 }
 
 main{
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    margin-inline: auto;
+    justify-content: space-between;
+    flex-direction: row;
+    color: #EEEEEE;
+}
+
+/*Daftar Bab*/
+main aside .daftar-bab{
+    max-width: 240px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #393E46;
+    border-radius: 20px;
+}
+
+main aside .daftar-bab ul{
+    display: flex;
+    flex-direction: column;
+}
+
+main aside .daftar-bab li{
+    list-style-type: none;
+}
+
+main aside .daftar-bab li a{
+    text-decoration: none;
+    color: #EEEEEE;
+}
+
+/*Main Content*/
+main .main-article{
+    max-width: 640px;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+    background-color: #393E46;
+    border-radius: 20px;
+}
+
+main .main-article .intro-perlinier .img{
+    display: flex;
+    justify-content: center;
+}
+
+main .main-article .intro-perlinier .img img{
+    width: 300px;
+}
+
+main .main-article .penyelesaian-perlinier .exp-img{
+    display: flex;
+    justify-content: center;
+}
+
+/*Metode Eliminasi*/
+main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi{
+    max-height: 400px;
+    border-radius: 10px;
+    background-color: #222831;
+    color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul{
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul li{
+    padding: 0.5rem 1rem;
+    list-style-type: none;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul li:hover{
+    background-color: #393E46;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul .first{
+    border-radius: 10px 0px 0px 0px;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi p{
+    padding-left: 20px;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi .ilus-img{
+    display: flex;
+    justify-content: center;
+}
+
+/*Metode Grafik*/
+main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik{
+    max-height: 400px;
+    border-radius: 10px;
+    background-color: #222831;
+    color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik ul li{
+    padding: 0.5rem 1rem;
+    list-style-type: none;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik ul li:hover{
+    background-color: #393E46;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik ul .first{
+    border-radius: 10px 0px 0px 0px;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik p{
+    padding-left: 20px;
+}
+
+main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik .ilus-img{
+    display: flex;
+    justify-content: center;
+}
+
+/*Gauss*/
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss{
+    max-height: 400px;
+    border-radius: 10px;
+    background-color: #222831;
+    color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+}
+
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul li{
+    padding: 0.5rem 1rem;
+    list-style-type: none;
+}
+
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul li:hover{
+    background-color: #393E46;
+}
+
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul .first{
+    border-radius: 10px 0px 0px 0px;
+}
+
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss p{
+    padding-left: 20px;
+}
+
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss .eg-ilus{
+    display: flex;
+    justify-content: center;
+}
+
+/*Gauss Jordan*/
+main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan{
+    max-height: 400px;
+    border-radius: 10px;
+    background-color: #222831;
+    color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+}
+
+main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul li{
+    padding: 0.5rem 1rem;
+    list-style-type: none;
+}
+
+main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul li:hover{
+    background-color: #393E46;
+}
+
+main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul .first{
+    border-radius: 10px 0px 0px 0px;
+}
+
+main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan p{
+    padding-left: 20px;
+}
+
+main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan .egj-ilus{
+    display: flex;
+    justify-content: center;
+}
+
+main .main-article .button {
+    display: flex;
+    justify-content: center;
+}
+
+main .main-article .button .quiz-btn{
+    width: 320px;
+    height: 50px;
+    color: #EEEEEE;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: 2px solid #222831;
+    border-radius: 10px;
+    background-color: #222831;
+}
+
+main .main-article .button .quiz-btn:hover{
+    background-color: #393E46;
+}
+
+/*Fun Fact*/
+main aside .bab-funfact{
+    max-width: 320px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #393E46;
+    border-radius: 20px;
+}
+
+main aside h2{
+    text-align: center;
+}
+
+main aside .bab-funfact .img-box {
+    display: flex;
+    justify-content: center;
+}
+
+main aside .bab-funfact .img-box img{
+    width: 250px;
+}
+
+/*Footer*/
+footer{
+    background-color: #393E46;
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer .social-media ul{
+    display: flex;
+    flex-direction: row;
+}
+
+footer .social-media ul li{
+    color: #EEEEEE;
+    padding: 0rem 1rem;
+    list-style-type: none;
+}
+
+footer .social-media ul li a{
+    text-decoration: none;
+    color: #EEEEEE;
 }

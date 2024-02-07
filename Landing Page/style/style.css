@@ -3,7 +3,9 @@
 }
 
 body{
+    background-color: #222831;
     font-family: 'Tinos', serif;
+    color: #EEEEEE;
     font-size: 1.05rem;
     margin: 0;
     display: flex;
@@ -13,7 +15,7 @@ body{
 header.navbar-container{
     width: 100%;
     max-width: 1200px;
-    background-color: #393E46;
+    background-color: #222831;
     margin-inline: auto;
     display: flex;
     justify-content: center;
@@ -43,60 +45,75 @@ header.navbar-container .nav-list li a{
 }
 
 header.navbar-container .nav-list li:hover a{
-    background-color: #222831;
+    background-color: #393E46;
 }
 
 main{
-    flex: 1;
     width: 80%;
     max-width: 1200px;
+    display: flex;
     margin-inline: auto;
-    display: flex;
-    color: #222831;
+    justify-content: space-between;
+    flex-direction: row;
+    color: #EEEEEE;
 }
 
-main div.introduction   {
-    width: 500%;
-    margin-right: 10px;
+main article{
+    max-width: 800px;
+    margin: 20px 20px 20px 0px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #393E46;
+}
+
+main article .introduction-image{
+    display: flex;
     justify-content: center;
-    background-color: #EEEEEE;
-    padding: 20px;
 }
 
-main .introduction .introduction-image{
-    flex: 1;
+main article .introduction-image img{
+    width: 210px;
+}
+
+main aside .profile{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #393E46;
+    border-radius: 20px;
+}
+
+main aside .profile h3,h4{
+    text-align: center;
+}
+
+main aside .profile .dev-image{
     display: flex;
+    justify-content: center;
 }
 
-main .introduction .introduction-image img{
-    width: 250px;
-    margin: auto;
-}
-
-main aside {
-    padding: 20px;
-    max-height: 500px;
-    border-radius: 0px 0px 10px 10px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    background-color: #EEEEEE;
+main aside .profile .dev-image img{
+    max-width: 300px;
 }
 
 main aside .profile .social-media ul{
     display: flex;
     flex-direction: column;
-    align-items: center ;
 }
 
-main aside .profile .social-media li {
+main aside .profile .social-media ul li{
+    color: #EEEEEE;
+    padding: 0.3rem 1rem;
     list-style-type: none;
 }
 
+main aside .profile .social-media ul li a{
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
 footer{
-    padding: 10px;
+    background-color: #393E46;
+    padding: 1rem;
     display: flex;
     justify-content: center;
-    background-color: #222831;
-    color: #EEEEEE;
 }
