@@ -114,7 +114,6 @@ main .main-article .penyelesaian-perlinier .exp-img img{
 /*Metode Eliminasi dan Metode Grafik*/
 main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi,
 main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik{
-    max-height: 400px;
     border-radius: 10px;
     background-color: #222831;
     color: #EEEEEE;
@@ -139,7 +138,7 @@ main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-graf
 
 main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul li:hover,
 main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik ul li:hover{
-    background-color: #393E46;
+    cursor: pointer;
 }
 
 main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul #first-elim,
@@ -149,13 +148,13 @@ main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-graf
 
 main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi p,
 main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik p{
+    font-size: 1.1em;
     padding-left: 20px;
 }
 
 main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi .ilus-img,
 main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik .ilus-img{
-    max-height: 300px;
-    padding-bottom: 50px;
+    padding: 20px;
     display: flex;
     justify-content: center;
 }
@@ -175,49 +174,9 @@ main .main-article .penyelesaian-perlinier .egj-eximg img, main .main-article .e
     border-radius: 20px;
 }
 
-/*Gauss*/
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss{
-    max-height: 400px;
-    border-radius: 10px;
-    background-color: #222831;
-    color: #EEEEEE;
-    display: flex;
-    flex-direction: column;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul li{
-    padding: 0.5rem 1rem;
-    list-style-type: none;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul li:hover{
-    background-color: #393E46;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul #first-g{
-    border-radius: 10px 0px 0px 0px;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss p{
-    padding-left: 20px;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss .eg-ilus{
-    display: flex;
-    justify-content: center;
-}
-
-/*Gauss Jordan*/
+/*Gauss, Gauss Jordan*/
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss,
 main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan{
-    max-height: 400px;
     border-radius: 10px;
     background-color: #222831;
     color: #EEEEEE;
@@ -225,6 +184,7 @@ main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan{
     flex-direction: column;
 }
 
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul,
 main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul{
     padding: 0;
     margin: 0;
@@ -233,26 +193,40 @@ main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul{
     justify-content: flex-start;
 }
 
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul li,
 main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul li{
     padding: 0.5rem 1rem;
     list-style-type: none;
 }
 
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul li:hover,
 main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul li:hover{
-    background-color: #393E46;
+    cursor: pointer;
 }
 
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul #first-g,
 main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul #first-gj{
     border-radius: 10px 0px 0px 0px;
 }
-
+    
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss p,
 main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan p{
+    font-size: 1.1em;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
-main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan .egj-ilus{
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss .eg-ilus-img,
+main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan .egj-ilus-img{
+    padding: 20px;
     display: flex;
     justify-content: center;
+}
+
+main .main-article .egj .elim-gauss .ilustrasi-metode-gauss .eg-ilus-img img,
+main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan .egj-ilus-img img{
+    width: 400px;
+    border-radius: 20px;
 }
 
 main .main-article .button {
