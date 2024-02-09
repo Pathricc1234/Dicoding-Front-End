@@ -22,9 +22,9 @@ const gaussJordanContent = {
     first: "Pertama adalah mengubah bentuk persamaan menjadi bentuk matriks.img/gauss/matrix-g.png",
     second: "Kemudian kita lihat baris pertama, untuk baris pertama dan kolom pertama sudah bernilai satu maka tidak perlu operasi pembagian, setelah itu kita tambah baris kedua dengan baris pertama dan baris ketiga dikurang dengan tiga kali baris pertama.img/gauss/op1-eg.png",
     third: "Selanjutnya, karena baris dua dan kolom kedua bukan bernilai satu maka kita kali negatif satu agar hasilnya menjadi satu.img/gauss/op2-eg.png",
-    third: "Kemudian, baris pertama dikurangi dengan baris kedua, dan baris ketiga ditambah dengan sepuluh kali baris kedua.img/gaussjordan/op3-egj.png",
-    fourth: "Karena baris dan kolom ketiga bukan bernilai satu maka kita bagi dengan negatif 52 agar nilainya menjadi satu.img/gaussjordan/op4-egj.png",
-    fifth: "Setelah kolom dan baris ketiga bernilai satu maka langkah terakhir adalah mengurangi baris satu dengan baris tujuh kali baris ketiga dan menambahkan baris kedua dengan lima kali baris ketiga, dan hasil yang didapatkan tidak perlu subtitusi.img/gaussjordan/op5-egj.png",
+    fourth: "Kemudian, baris pertama dikurangi dengan baris kedua, dan baris ketiga ditambah dengan sepuluh kali baris kedua.img/gaussjordan/op3-egj.png",
+    fifth: "Karena baris dan kolom ketiga bukan bernilai satu maka kita bagi dengan negatif 52 agar nilainya menjadi satu.img/gaussjordan/op4-egj.png",
+    sixth: "Setelah kolom dan baris ketiga bernilai satu maka langkah terakhir adalah mengurangi baris satu dengan baris tujuh kali baris ketiga dan menambahkan baris kedua dengan lima kali baris ketiga, dan hasil yang didapatkan tidak perlu subtitusi.img/gaussjordan/op5-egj.png",
 }
 
 const eliminationMap = new Map([
@@ -53,4 +53,5 @@ const gaussJordanMap = new Map([
     ["third", gaussJordanContent.third],
     ["fourth", gaussJordanContent.fourth],
     ["fifth", gaussJordanContent.fifth],
+    ["sixth", gaussJordanContent.sixth]
 ]);

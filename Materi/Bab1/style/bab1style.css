@@ -199,6 +199,10 @@ main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul li{
     list-style-type: none;
 }
 
+main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul #sixth-gj{
+    border-radius: 0px 10px 0px 0px;
+}
+
 main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul li:hover,
 main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul li:hover{
     cursor: pointer;

@@ -200,6 +200,7 @@ document.addEventListener("DOMContentLoaded",function(){
     const thirdGJ = document.getElementById("third-gj");
     const fourthGJ = document.getElementById("fourth-gj");
     const fifthGJ = document.getElementById("fifth-gj");
+    const sixthGJ = document.getElementById("sixth-gj");
     const expGJ = document.getElementById("exp-egj");
     const imgGJ = document.querySelector(".ilustrasi-metode-gauss-jordan img");
 
@@ -215,6 +216,7 @@ document.addEventListener("DOMContentLoaded",function(){
             thirdGJ.style.backgroundColor = '#222831';
             fourthGJ.style.backgroundColor = '#222831';
             fifthGJ.style.backgroundColor = '#222831';
+            sixthGJ.style.backgroundColor = '#222831';
             var cont = splitContent(4,"first");
             expGJ.textContent = cont[0];
             imgGJ.src = cont[1] + ".png";
@@ -227,6 +229,7 @@ document.addEventListener("DOMContentLoaded",function(){
             thirdGJ.style.backgroundColor = '#222831';
             fourthGJ.style.backgroundColor = '#222831';
             fifthGJ.style.backgroundColor = '#222831';
+            sixthGJ.style.backgroundColor = '#222831';
             var cont = splitContent(4,"second");
             expGJ.textContent = cont[0];
             imgGJ.src = cont[1] + ".png";
@@ -239,6 +242,7 @@ document.addEventListener("DOMContentLoaded",function(){
             thirdGJ.style.backgroundColor = '#00ADB5';
             fourthGJ.style.backgroundColor = '#222831';
             fifthGJ.style.backgroundColor = '#222831';
+            sixthGJ.style.backgroundColor = '#222831';
             var cont = splitContent(4,"third");
             expGJ.textContent = cont[0];
             imgGJ.src = cont[1] + ".png";
@@ -251,6 +255,7 @@ document.addEventListener("DOMContentLoaded",function(){
             thirdGJ.style.backgroundColor = '#222831';
             fourthGJ.style.backgroundColor = '#00ADB5';
             fifthGJ.style.backgroundColor = '#222831';
+            sixthGJ.style.backgroundColor = '#222831';
             var cont = splitContent(4,"fourth");
             expGJ.textContent = cont[0];
             imgGJ.src = cont[1] + ".png";
@@ -263,7 +268,21 @@ document.addEventListener("DOMContentLoaded",function(){
             thirdGJ.style.backgroundColor = '#222831';
             fourthGJ.style.backgroundColor = '#222831';
             fifthGJ.style.backgroundColor = '#00ADB5';
+            sixthGJ.style.backgroundColor = '#222831';
             var cont = splitContent(4,"fifth");
+            expGJ.textContent = cont[0];
+            imgGJ.src = cont[1] + ".png";
+        });
+    }
+    if(sixthGJ){
+        sixthGJ.addEventListener("click",function(){
+            firstGJ.style.backgroundColor = '#222831';
+            secondGJ.style.backgroundColor = '#222831';
+            thirdGJ.style.backgroundColor = '#222831';
+            fourthGJ.style.backgroundColor = '#222831';
+            fifthGJ.style.backgroundColor = '#222831';
+            sixthGJ.style.backgroundColor = '#00ADB5';
+            var cont = splitContent(4,"sixth");
             expGJ.textContent = cont[0];
             imgGJ.src = cont[1] + ".png";
         });
