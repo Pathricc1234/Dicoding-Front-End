@@ -229,6 +229,48 @@ main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan .egj-i
     border-radius: 20px;
 }
 
+/*Latihan Soal  */
+main .main-article .latsol > div{
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #222831;
+    color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+}
+
+main .main-article .latsol h3, main .main-article .latsol p{
+    padding: 0.1rem 1rem; 
+}
+
+main .main-article .latsol i{
+    padding: 1rem 1rem;
+}
+
+main .main-article .latsol div:has(> img){
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+main .main-article .latsol img{
+    width: 500px;
+    border-radius: 20px;
+}
+
+main .main-article .latsol li{
+    list-style: upper-alpha;
+    margin: 0.2rem;
+}
+
+main .main-article .latsol div[class^="pembahasan-"]{
+    display: none;
+    justify-content: center;
+}
+
+/*Quiz*/
 main .main-article .button {
     display: flex;
     justify-content: center;
@@ -243,10 +285,6 @@ main .main-article .button .quiz-btn{
     border: 2px solid #222831;
     border-radius: 10px;
     background-color: #222831;
-}
-
-main .main-article .button .quiz-btn:hover{
-    background-color: #393E46;
 }
 
 /*Fun Fact*/

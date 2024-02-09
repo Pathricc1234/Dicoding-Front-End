@@ -269,3 +269,63 @@ document.addEventListener("DOMContentLoaded",function(){
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded",function(){
+    const pg1btn = document.getElementById("pem-pg1-btn");
+    const pg1dis = document.getElementById("pg1-dis");
+    const pg2btn = document.getElementById("pem-pg2-btn");
+    const pg2dis = document.getElementById("pg2-dis");
+    const ess1btn = document.getElementById("pem-ess1-btn");
+    const ess1dis = document.getElementById("ess1-dis");
+    const ess2btn = document.getElementById("pem-ess2-btn");
+    const ess2dis = document.getElementById("ess2-dis")
+
+    if(pg1btn){
+        pg1btn.addEventListener("click",function(){
+            if(pg1dis.style.display == "none"){
+                pg1dis.style.display = "flex";
+                pg1btn.style.color = '#00ADB5';
+            }
+            else{
+                pg1dis.style.display = "none";
+                pg1btn.style.color = '#EEEEEE';
+            }
+        });
+    }
+    if(pg2btn){
+        pg2btn.addEventListener("click",function(){
+            if(pg2dis.style.display == "none"){
+                pg2dis.style.display = "flex";
+                pg2btn.style.color = '#00ADB5';
+            }
+            else{
+                pg2dis.style.display = "none";
+                pg2btn.style.color = '#EEEEEE';
+            }
+        });
+    }
+    if(ess1btn){
+        ess1btn.addEventListener("click",function(){
+            if(ess1dis.style.display == "none"){
+                ess1dis.style.display = "flex";
+                ess1btn.style.color = '#00ADB5';
+            }
+            else{
+                ess1dis.style.display = "none";
+                ess1btn.style.color = '#EEEEEE';
+            }
+        });
+    }
+    if(ess2btn){
+        ess2btn.addEventListener("click",function(){
+            if(ess2dis.style.display == "none"){
+                ess2dis.style.display = "flex";
+                ess2btn.style.color = '#00ADB5';
+            }
+            else{
+                ess2dis.style.display = "none";
+                ess2btn.style.color = '#EEEEEE';
+            }
+        });
+    }
+});
