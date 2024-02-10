@@ -13,7 +13,7 @@ body{
 }
 
 /*Navbar*/
-header.navbar-container{
+.navbar-container{
     width: 100%;
     max-width: 1200px;
     background-color: #222831;
@@ -23,21 +23,21 @@ header.navbar-container{
     align-items: center;
 }
 
-header.navbar-container .logo img{
+.logo img{
     width: 50px;
 }
 
-header.navbar-container .nav-list ul {
+.nav-list ul {
     display: flex;
     justify-content: center;
     gap: 3rem 2rem;
 }
 
-header.navbar-container .nav-list li {
+.nav-list li {
     list-style-type: none;
 }
 
-header.navbar-container .nav-list li a{
+.nav-list li a{
     padding: 1rem 1.5rem;
     text-decoration: none;
     font-size: 1.5rem;
@@ -45,7 +45,7 @@ header.navbar-container .nav-list li a{
     transition: all 0.3s ease-in-out;
 }
 
-header.navbar-container .nav-list li:hover a{
+.nav-list li:hover a{
     background-color: #393E46;
 }
 
@@ -60,31 +60,31 @@ main{
 }
 
 /*Daftar Bab*/
-main aside .daftar-bab{
+.daftar-bab{
     max-width: 240px;
     margin-top: 20px;   
     background-color: #393E46;
     border-radius: 20px;
 }
 
-main aside .daftar-bab ul{
+.daftar-bab ul{
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
-main aside .daftar-bab li{
+.daftar-bab li{
     list-style-type: none;
     padding: 1rem 0rem;
 }
 
-main aside .daftar-bab li a{
+.daftar-bab li a{
     text-decoration: none;
     color: #EEEEEE;
 }
 
 /*Main Content*/
-main .main-article{
+.main-article{
     max-width: 640px;
     padding: 20px;
     margin: 20px 20px 20px 20px;
@@ -92,29 +92,31 @@ main .main-article{
     border-radius: 20px;
 }
 
-main .main-article .intro-perlinier .img{
+.img{
     display: flex;
     justify-content: center;
 }
 
-main .main-article .intro-perlinier .img img{
+.img img{
     width: 300px;
     border-radius: 20px;
 }
 
-main .main-article .penyelesaian-perlinier .exp-img{
+.exp-img{
     display: flex;
     justify-content: center;
 }
 
-main .main-article .penyelesaian-perlinier .exp-img img{
+.exp-img img{
     width: 250px;
     border-radius: 20px;
 }
 
-/*Metode Eliminasi dan Metode Grafik*/
-main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi,
-main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik{
+/*Ilustrasi*/
+.ilustrasi-metode-eliminasi,
+.ilustrasi-metode-grafik,
+.ilustrasi-metode-gauss,
+.ilustrasi-metode-gauss-jordan{
     border-radius: 10px;
     background-color: #222831;
     color: #EEEEEE;
@@ -122,8 +124,10 @@ main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-graf
     flex-direction: column;
 }
 
-main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul,
-main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik ul{
+.ilustrasi-metode-eliminasi ul,
+.ilustrasi-metode-grafik ul,
+.ilustrasi-metode-gauss ul,
+.ilustrasi-metode-gauss-jordan ul{
     padding: 0;
     margin: 0;
     display: flex;
@@ -131,95 +135,57 @@ main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-graf
     justify-content: flex-start;
 }
 
-main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul li,
-main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik ul li{
+.ilustrasi-metode-eliminasi ul li,
+.ilustrasi-metode-grafik ul li,
+.ilustrasi-metode-gauss ul li,
+.ilustrasi-metode-gauss-jordan ul li{
     padding: 0.5rem 1rem;
     list-style-type: none;
 }
 
-main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul li:hover,
-main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik ul li:hover{
+.ilustrasi-metode-eliminasi ul li:hover,
+.ilustrasi-metode-grafik ul li:hover,
+.ilustrasi-metode-gauss ul li:hover,
+.ilustrasi-metode-gauss-jordan ul li:hover{
     cursor: pointer;
 }
 
-main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi ul #first-elim,
-main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik ul #first-graph{
+.ilustrasi-metode-eliminasi ul #first-elim,
+.ilustrasi-metode-grafik ul #first-graph,
+.ilustrasi-metode-gauss ul #first-g,
+.ilustrasi-metode-gauss-jordan ul #first-gj{
     border-radius: 10px 0px 0px 0px;
 }
 
-main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi p,
-main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik p{
+.exp-p{
     font-size: 1.1em;
     padding-left: 20px;
 }
 
-main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi .ilus-img,
-main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik .ilus-img{
+.ilus-img{
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
     justify-content: center;
 }
 
-main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi .ilus-img img,
-main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik .ilus-img img{
+.ilus-img img{
     border-radius: 20px;
 }
 
-main .main-article .penyelesaian-perlinier .egj-eximg, main .main-article .egj .egj-prob{
+/*EGJ*/
+.egj-eximg, .egj-prob{
     display: flex;
     justify-content: center;
 }
 
-main .main-article .penyelesaian-perlinier .egj-eximg img, main .main-article .egj .egj-prob img{
+.egj-eximg img, .egj-prob img{
     width: 400px;
     border-radius: 20px;
 }
 
-/*Gauss, Gauss Jordan*/
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss,
-main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan{
-    border-radius: 10px;
-    background-color: #222831;
-    color: #EEEEEE;
-    display: flex;
-    flex-direction: column;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul,
-main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul li,
-main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul li{
-    padding: 0.5rem 1rem;
-    list-style-type: none;
-}
-
-main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul #sixth-gj{
+.ilustrasi-metode-gauss-jordan ul #sixth-gj{
     border-radius: 0px 10px 0px 0px;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul li:hover,
-main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul li:hover{
-    cursor: pointer;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss ul #first-g,
-main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan ul #first-gj{
-    border-radius: 10px 0px 0px 0px;
-}
-    
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss p,
-main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan p{
-    font-size: 1.1em;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 main .main-article .egj .elim-gauss .ilustrasi-metode-gauss .eg-ilus-img,
@@ -248,41 +214,44 @@ main .main-article .latsol > div{
     flex-direction: column;
 }
 
-main .main-article .latsol h3, main .main-article .latsol p{
+.latsol p, .latsol h3{
     padding: 0.1rem 1rem; 
 }
 
-main .main-article .latsol i{
+.latsol i{
     padding: 1rem 1rem;
 }
 
-main .main-article .latsol div:has(> img){
-    display: flex;
-    justify-content: center;
+.equation{
+    font-size: 1.5rem;
 }
 
-main .main-article .latsol img{
-    width: 500px;
-    border-radius: 20px;
-}
-
-main .main-article .latsol li{
+.latsol li{
     list-style: upper-alpha;
     margin: 0.2rem;
 }
 
-main .main-article .latsol div[class^="pembahasan-"]{
+.latsol div[class^="pembahasan-"]{
     display: none;
     justify-content: center;
 }
 
+.pembahasan-latsol{
+    display: flex;
+    flex-direction: column;
+}
+
+.matrices{
+    font-size: 1.3rem;
+}
+
 /*Quiz*/
-main .main-article .button {
+.button {
     display: flex;
     justify-content: center;
 }
 
-main .main-article .button .quiz-btn{
+.quiz-btn{
     width: 320px;
     height: 50px;
     color: #EEEEEE;
@@ -294,7 +263,7 @@ main .main-article .button .quiz-btn{
 }
 
 /*Fun Fact*/
-main aside .bab-funfact{
+.bab-funfact{
     display: flex;
     flex-direction: column;
     max-width: 320px;
@@ -304,16 +273,16 @@ main aside .bab-funfact{
     border-radius: 20px;
 }
 
-main aside h2{
+aside h2{
     text-align: center;
 }
 
-main aside .bab-funfact .img-box {
+.img-box {
     display: flex;
     justify-content: center;
 }
 
-main aside .bab-funfact .img-box img{
+.img-box img{
     width: 250px;
     border-radius: 20px;
 }
@@ -327,18 +296,18 @@ footer{
     justify-content: center;
 }
 
-footer .social-media ul{
+.social-media ul{
     display: flex;
     flex-direction: row;
 }
 
-footer .social-media ul li{
+.social-media ul li{
     color: #EEEEEE;
     padding: 0rem 1rem;
     list-style-type: none;
 }
 
-footer .social-media ul li a{
+.social-media ul li a{
     text-decoration: none;
     color: #EEEEEE;
 }
@@ -352,24 +321,24 @@ footer .social-media ul li a{
         margin-inline: auto;
         margin-top: 20px;
     }
-    main aside .daftar-bab{
+    .daftar-bab{
         max-width: none;
         margin: 0;
     }
-    main aside .daftar-bab ul{
+    .daftar-bab ul{
         flex-direction: row;
         flex-wrap: wrap ;
         align-content: flex-start;
         gap: 0rem 2rem;
     }
-    main aside .daftar-bab li{
+    .daftar-bab li{
         font-size: 1.4rem;
     }
-    main .main-article{
+    .main-article{
         margin: 20px 0px 0px 0px;
         margin-inline: auto;
     }
-    main aside .bab-funfact{
+    .bab-funfact{
         margin-inline: auto;
         max-width: 600px;
         margin-bottom: 20px;
@@ -380,26 +349,26 @@ footer .social-media ul li a{
     img{
         max-width: 200px;
     }
-    main .main-article ul{
+    .main-article ul{
         flex-wrap: wrap;
     }
     footer{
         flex-wrap: wrap;
     }
-    footer .social-media ul{
+    .social-media ul{
         flex-direction: column;
     }
 }
 
 @media screen and (max-width: 430px){
-    header.navbar-container .nav-list ul{
+    .nav-list ul{
         padding: 0;
         gap: 0;
     }
-    header.navbar-container .nav-list li a{
+    .nav-list li a{
         font-size: 1.2rem;
     }
-    main .main-article{
+    .main-article{
         max-width: 300px;
     }
 }

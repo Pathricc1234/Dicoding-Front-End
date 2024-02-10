@@ -15,6 +15,9 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
             integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
             crossorigin="anonymous" referrerpolicy="no-referrer">
+            <!--Math-->
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         </head>
         <body>
             <!--Javascript-->
@@ -88,7 +91,7 @@
                                     <li id="third-elim">Subtitusi</li>
                                 </ul>
                                 <!--Penjelasan Ilustrasi-->
-                                <p id="exp-elim">
+                                <p id="exp-elim" class="exp-p">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos ea minus dolor perspiciatis nihil impedit in, itaque eum laborum quisquam aspernatur consequatur odit veritatis? Facilis iste dicta consequatur cumque.
                                 </p>
                                 <div class="ilus-img">
@@ -110,7 +113,7 @@
                                     <li id="third-graph">Mengimpretasikan</li>
                                 </ul>
                                 <!--Penjelasan Ilustrasi-->
-                                <p id="exp-graph">
+                                <p id="exp-graph" class="exp-p">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, voluptatibus minus! Quasi tenetur omnis, commodi voluptatibus porro cupiditate non. Consequatur placeat vero aperiam quam. Ratione voluptatum voluptas quaerat id obcaecati.
                                 </p>
                                 <div class="ilus-img">
@@ -162,7 +165,7 @@
                                     <li id="fifth-g">Subtitusi</li>
                                 </ul>
                                 <!--Penjelasan Ilustrasi Metode Gauss-->
-                                <p id="exp-eg">
+                                <p id="exp-eg" class="exp-p">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dolor voluptatibus quasi odio beatae earum nostrum, aperiam perspiciatis dolore unde veritatis magnam blanditiis ipsa, iusto, corrupti quod quia quos maiores!
                                 </p>
                                 <div class="eg-ilus-img">
@@ -187,7 +190,7 @@
                                     <li id="sixth-gj">Operasi 5</li>
                                 </ul>
                                 <!--Penjelasan Ilustrasi Metode Gauss Jordan-->
-                                <p id="exp-egj">
+                                <p id="exp-egj" class="exp-p">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dolor voluptatibus quasi odio beatae earum nostrum, aperiam perspiciatis dolore unde veritatis magnam blanditiis ipsa, iusto, corrupti quod quia quos maiores!
                                 </p>
                                 <div class="egj-ilus-img">
@@ -213,8 +216,14 @@
                         <div class="soal-pg-1">
                             <h3>Pilihan Ganda 1 </h3>
                             <p>Cari nilai a,b,dan c menggunakan Gauss-Jordan</p>
-                            <div class="img-pg1">
-                                <img src="img/latsol/pg1.png" alt="Pilihan Ganda 1">
+                            <div class="equation">
+                                \[
+                                \begin{align*}
+                                -2b + 3c &= 1 \\
+                                3a + 6b - 3c &= -2 \\
+                                6a + 6b + 3c &= 5
+                                \end{align*}
+                                \]
                             </div>
                             <div class="pg1-opt">
                                 <ol>
@@ -229,51 +238,353 @@
                         <div class="plus-btn">
                             <i class="fas fa-plus" id="pem-pg1-btn"></i>
                         </div>
-                        <div class="pembahasan-pg1" id="pg1-dis">
-                            <img src="img/latsol/sol-pg1.png" alt="Pembahasan Pilihan Ganda 1">
+                        <div class="pembahasan-latsol" id="pg1-dis">
+                            <p>
+                                Pertama kita ubah bentuk persamaan menjadi bentuk matriks augmented
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \left[
+                                \begin{array}{ccc|c}
+                                    0 & -2 & 3 & 1 \\
+                                    3 & 6 & -3 & -2 \\
+                                    6 & 6 & 3 & 5
+                                \end{array}
+                                \right]
+                                \] 
+                            </div>
+                            <p>
+                                Karena nilai kolom dan baris pertama nol maka kita tukar baris pertama dan kedua, dan membagi baris pertama dengan 3
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b_1 \leftrightarrow b_2}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    3 & 6 & -3 & -2 \\
+                                    0 & -2 & 3 & 1 \\
+                                    6 & 6 & 3 & 5
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                                \[
+                                \xrightarrow{\frac{b1}{3}}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 2 & -1 & \frac{-2}{3} \\
+                                    0 & -2 & 3 & 1 \\
+                                    6 & 6 & 3 & 5
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Selanjutnya adalah mengurangi baris ketiga dengan enam kali baris pertama
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b3 - 6b1}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 2 & -1 & \frac{-2}{3} \\
+                                    0 & -2 & 3 & 1 \\
+                                    0 & -6 & 9 & 9
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Kemudian kita bagi baris kedua dengan negatif dua agar baris dan kolom kedua dapat bernilai satu
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{\frac{-b2}{2}}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 2 & -1 & \frac{-2}{3} \\
+                                    0 & 1 & \frac{-3}{2} & \frac{-1}{2} \\
+                                    0 & -6 & 9 & 9
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Kemudian baris pertama dikurang dua kali baris kedua, dan baris ketiga ditambah enam kali baris kedua
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b1 - b2, b3 + 6b1}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 0 & 2 & \frac{1}{3} \\
+                                    0 & 1 & \frac{-3}{2} & \frac{-1}{2} \\
+                                    0 & 0 & 0 & 6
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Karena semua nilai bernilai nol pada baris ketiga kecuali hasil maka persamaan ini tidak konsisten
+                            </p>
                         </div>
                     </div>
                     <div class="pg-2">
                         <div class="soal-pg-2">
                             <h3>Pilihan Ganda 2</h3>
                             <p>Cari nilai X<sub>1</sub>,X<sub>2</sub>,dan X<sub>3</sub> menggunakan Gauss-Jordan</p>
-                            <div class="img-pg2">
-                                <img src="img/latsol/pg2.png" alt="Pilihan Ganda 2">
+                            <div class="equation">
+                                \[
+                                \begin{align*}
+                                2x_1 + 2x_2 + 2x_3 &= 0 \\
+                                -2x_1 + 5x_2 + 2x_3 &= 1 \\
+                                8x_1 + x_2 + 4x_3 &= -1
+                                \end{align*}
+                                \]
                             </div>
                             <div class="pg2-opt">
                                 <ol>
-                                    <li>X<sub>1</sub> = 3, X<sub>2</sub> = 1, X<sub>3</sub> = 3/2</li>
+                                    <li>X<sub>1</sub> = 0, X<sub>2</sub> = -1/7, X<sub>3</sub> = 1/7</li>
                                     <li>X<sub>1</sub> = -1/7, X<sub>2</sub> = 1/7, X<sub>3</sub> = 0</li>
-                                    <li>X<sub>1</sub> = 2/3, X<sub>2</sub> = 4, X<sub>3</sub> = 7</li>
-                                    <li>X<sub>1</sub> = -3, X<sub>2</sub> = 5/2, X<sub>3</sub> = -2</li>
-                                    <li>X<sub>1</sub> = 0, X<sub>2</sub> = 1, X<sub>3</sub> = 1 </li>
+                                    <li>X<sub>1</sub> = -1/7, X<sub>2</sub> = 0, X<sub>3</sub> = 1/7</li>
+                                    <li>X<sub>1</sub> = 0, X<sub>2</sub> = 1/7, X<sub>3</sub> = -1/7</li>
+                                    <li>X<sub>1</sub> = 1/7, X<sub>2</sub> = 0, X<sub>3</sub> = -1/7 </li>
                                 </ol>
                             </div>
                         </div>
                         <div class="plus-btn">
                             <i class="fas fa-plus" id="pem-pg2-btn"></i>
                         </div>
-                        <div class="pembahasan-pg2" id="pg2-dis">
-                            <img src="img/latsol/sol-pg2.png" alt="Pembahasan Pilihan Ganda 2">
+                        <div class="pembahasan-latsol" id="pg2-dis">
+                            <p>
+                                Pertama kita ubah bentuk persamaan menjadi bentuk matriks augmented
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \left[
+                                \begin{array}{ccc|c}
+                                    2 & 2 & 2 & 0 \\
+                                    -2 & 5 & 2 & 1 \\
+                                    8 & 1 & 4 & -1
+                                \end{array}
+                                \right]
+                                \] 
+                            </div>
+                            <p>
+                                Karena pada baris dan kolom pertama tidak bernilai satu maka baris pertama kita bagi dua
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{\frac{b1}{2}}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 1 & 1 & 0 \\
+                                    -2 & 5 & 2 & 1 \\
+                                    8 & 1 & 4 & -1
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Kemudian baris kedua dijumlahkan dengan dua kali baris pertama dan baris ketiga dikurangi dengan delapan kali baris pertama
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b2+2b1, b3-8b1}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 1 & 1 & 0 \\
+                                    0 & 7 & 3 & 1 \\
+                                    0 & 7 & -4 & -1
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Kemudian baris kedua dibagi dengan tujuh agar baris dan kolom kedua bernilai satu
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{\frac{b2}{7}}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 1 & 1 & 0 \\
+                                    0 & 1 & \frac{3}{7} & \frac{1}{7} \\
+                                    0 & 7 & -4 & -1
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Kemudian baris pertama dikurangi baris kedua dan baris ketiga ditambah tujuh kali baris kedua
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b1-b2,b3+7b1}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 0 & 1 & \frac{-1}{7} \\
+                                    0 & 1 & \frac{3}{7} & \frac{1}{7} \\
+                                    0 & 0 & -1 & 0
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Kemudian baris ketiga dikali negatif satu agar kolom dan baris ketiga bernilai satu
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b1-b2,b3+7b1}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 0 & 1 & \frac{-1}{7} \\
+                                    0 & 1 & \frac{3}{7} & \frac{1}{7} \\
+                                    0 & 0 & 1 & 0
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Terakhir adalah mengurangi baris pertama dengan baris ketiga dan baris keduan dengan 3/7 baris pertama
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b1-b3, b2-\frac{3b1}{7}}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 0 & 0 & \frac{-1}{7} \\
+                                    0 & 1 & 0 & \frac{1}{7} \\
+                                    0 & 0 & 1 & 0
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
                         </div>
                     </div>
                     <div class="es-1">
                         <div class="soal-ess-1">
                             <h3>Essai 1</h3>
                             <p>Cari nilai x,y,z,dan w menggunakan Gauss-Jordan</p>
-                            <div class="img-ess1">
-                                <img src="img/latsol/ess1.png" alt="Essai 1">
+                            <div class="equation">
+                                \[
+                                \begin{align*}
+                                x - y + 2z - w &= -1 \\
+                                2x + y + -2z - 2w &= -2 \\
+                                -x + 2y - 4z + w &= 1 \\
+                                3x - 3w &= -3
+                                \end{align*}
+                                \]
                             </div>
                         </div>
                         <div class="plus-btn">
                             <i class="fas fa-plus" id="pem-ess1-btn"></i>
                         </div>
-                        <div class="pembahasan-pg3" id="ess1-dis">
-                            <img src="img/latsol/sol-ess1.png" alt="Pembahasan Essai">
+                        <div class="pembahasan-latsol" id="ess1-dis">
+                            <p>
+                                Pertama kita ubah bentuk persamaan menjadi bentuk matriks augmented
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \left[
+                                \begin{array}{cccc|c}
+                                    1 & -1 & 2 & -1 & -1 \\
+                                    2 & 1 & -2 & -2 & -2 \\
+                                    -1 & 2 & -4 & 1 & 1 \\
+                                    3 & 0 & 0 & -3 & -3
+                                \end{array}
+                                \right]
+                                \] 
+                            </div>
+                            <p>
+                                Karena baris dan kolom pertama sudah bernilai satu maka selanjutnya adalah mengurangi baris kedua dengan dua kali baris pertama,
+                                baris ketiga dijumlahkan dengan baris pertama, dan baris keempat dikurangi tiga kali baris pertama
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b2-2b1,b3+b1,b4-3b1}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{cccc|c}
+                                    1 & -1 & 2 & -1 & -1 \\
+                                    0 & 3 & -6 & 0 & 0 \\
+                                    0 & 1 & -2 & 0 & 0 \\
+                                    0 & 0 & 0 & 0 & 0
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Karena baris dan kolom kedua tidak bernilai satu maka baris kedua dibagi tiga
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{\frac{b2}{3}}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{cccc|c}
+                                    1 & -1 & 2 & -1 & -1 \\
+                                    0 & 1 & -2 & 0 & 0 \\
+                                    0 & 1 & -2 & 0 & 0 \\
+                                    0 & 0 & 0 & 0 & 0
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>Terakhir adalah menambah baris pertama dengan baris kedua dan baris ketiga dikurangi baris kedua</p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{\frac{b2}{3}}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{cccc|c}
+                                    1 & 0 & 0 & -1 & -1 \\
+                                    0 & 1 & -2 & 0 & 0 \\
+                                    0 & 0 & 0 & 0 & 0 \\
+                                    0 & 0 & 0 & 0 & 0
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>Karena tidak bisa melakukan operasi lagi, dan dilihat dari hasilnya penyelesaiannya adalah tak terhingga</p>
+                            <div class="equation">
+                                \[
+                                \begin{align*}
+                                w &= a \\
+                                z &= b \\
+                                x &= -1 + a \\
+                                y &= 2b
+                                \end{align*}
+                                \]
+                            </div>
                         </div>
                     </div>
                     <div class="es-2">
-                        <div class="soal-ess-2">
+                        <div class="soal-p">
                             <h3>Essai 2</h3>
                             <p>Cari harga dari perunggu, tembaga, dan besi per kilogram menggunakan Gauss-Jordan</p>
                             <div class="txt-ess2">
@@ -290,8 +601,164 @@
                         <div class="plus-btn">
                             <i class="fas fa-plus" id="pem-ess2-btn"></i>
                         </div>
-                        <div class="pembahasan-ess2" id="ess2-dis">
-                            <img src="img/latsol/sol-ess2.png" alt="Pembahasan Essai 2">
+                        <div class="pembahasan-latsol" id="ess2-dis">
+                            <p>
+                                Pertama adalah membuat model persamaan linier berdasarkan soal
+                            </p>
+                            <div class="equation">
+                                \[
+                                \begin{align*}
+                                300p + 200t + 400b &= 140000 \\
+                                200p + 500t + 300b &= 135000 \\
+                                100p + 100t + 200b &= 60000 \\
+                                \end{align*}
+                                \]
+                            </div>
+                            <p>
+                                Kemudian membuat bentuk matriks augmented berdasarkan persamaan
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \left[
+                                \begin{array}{ccc|c}
+                                    300 & 200 & 400 & 140000 \\
+                                    200 & 500 & 300 & 135000 \\
+                                    100 & 100 & 200 & 60000
+                                \end{array}
+                                \right]
+                                \] 
+                            </div>
+                            <p>
+                                Untuk memudahkan perhitungan, maka semua baris dibagi dengan 100
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \left[
+                                \begin{array}{ccc|c}
+                                    3 & 2 & 4 & 1400 \\
+                                    2 & 5 & 3 & 1350 \\
+                                    1 & 1 & 2 & 600
+                                \end{array}
+                                \right]
+                                \] 
+                            </div>
+                            <p>
+                                Karena baris ketiga memiliki nilai satu pada kolom pertama, maka tukar baris ketiga dan baris pertama
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b1 \leftrightarrow 3}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 1 & 2 & 600 \\
+                                    2 & 5 & 3 & 1350 \\
+                                    3 & 2 & 4 & 1400
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Kemudian mengurangi baris kedua dengan dua kali baris pertama dan baris ketiga dikurangi tiga kali baris pertama
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b2-2b1, b3-3b1}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 1 & 2 & 600 \\
+                                    0 & 3 & -1 & 150 \\
+                                    0 & -1 & -2 & -400
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Karena baris kedua memiliki nilai -1 pada kolom kedua maka kita tukar dengan b3, kemudian dikali -1 agar bernilai satu
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b2 \leftrightarrow b3}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 1 & 2 & 600 \\
+                                    0 & -1 & -2 & -400 \\
+                                    0 & 3 & -1 & 150
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                                \[
+                                \xrightarrow{-b2}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 1 & 2 & 600 \\
+                                    0 & 1 & 2 & 400 \\
+                                    0 & 3 & -1 & 150
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Kemudian baris pertama dikurangi baris kedua, dan baris ketiga dikurangi tiga kali baris kedua
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b1-b2, b3-3b2}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 0 & 0 & 200 \\
+                                    0 & 1 & 2 & 400 \\
+                                    0 & 0 & -7 & -1050
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Kemudian baris ketiga dibagi dengan -7 agar baris dan kolom ketiga bernilai satu
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{\frac{b3}{-7}}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 0 & 0 & 200 \\
+                                    0 & 1 & 2 & 400 \\
+                                    0 & 0 & 1 & 150
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Terakhir adalah mengurangi baris kedua dengan dua kali baris ketiga
+                            </p>
+                            <div class="matrices">
+                                \[
+                                \xrightarrow{b2-2b3}
+                                \begin{array}{@{}l@{}}
+                                \left[
+                                \begin{array}{ccc|c}
+                                    1 & 0 & 0 & 200 \\
+                                    0 & 1 & 0 & 100 \\
+                                    0 & 0 & 1 & 150
+                                \end{array}
+                                \right]
+                                \end{array}
+                                \]
+                            </div>
+                            <p>
+                                Jadi harga untuk perunggu adalah $200, tembaga adalah $100, dan besi adalah $150
+                            </p>
                         </div>
                     </div>
                     </article>
