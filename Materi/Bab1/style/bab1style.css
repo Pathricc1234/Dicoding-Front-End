@@ -54,7 +54,7 @@ main{
     max-width: 1200px;
     display: flex;
     margin-inline: auto;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
     color: #EEEEEE;
 }
@@ -62,19 +62,20 @@ main{
 /*Daftar Bab*/
 main aside .daftar-bab{
     max-width: 240px;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 20px;   
     background-color: #393E46;
     border-radius: 20px;
 }
 
 main aside .daftar-bab ul{
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
 main aside .daftar-bab li{
     list-style-type: none;
+    padding: 1rem 0rem;
 }
 
 main aside .daftar-bab li a{
@@ -154,7 +155,8 @@ main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-graf
 
 main .main-article .penyelesaian-perlinier .solusi-eliminasi .ilustrasi-metode-eliminasi .ilus-img,
 main .main-article .penyelesaian-perlinier .solusi-grafik .ilustrasi-metode-grafik .ilus-img{
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
 }
@@ -222,7 +224,8 @@ main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan p{
 
 main .main-article .egj .elim-gauss .ilustrasi-metode-gauss .eg-ilus-img,
 main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan .egj-ilus-img{
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
 }
@@ -254,7 +257,6 @@ main .main-article .latsol i{
 }
 
 main .main-article .latsol div:has(> img){
-    padding: 20px;
     display: flex;
     justify-content: center;
 }
@@ -293,6 +295,8 @@ main .main-article .button .quiz-btn{
 
 /*Fun Fact*/
 main aside .bab-funfact{
+    display: flex;
+    flex-direction: column;
     max-width: 320px;
     margin-top: 20px;
     padding: 10px;
@@ -317,7 +321,7 @@ main aside .bab-funfact .img-box img{
 /*Footer*/
 footer{
     background-color: #393E46;
-    padding: 1rem 0rem;
+    padding: 20px;  
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -337,4 +341,65 @@ footer .social-media ul li{
 footer .social-media ul li a{
     text-decoration: none;
     color: #EEEEEE;
+}
+
+@media screen and (max-width: 1080px) {
+    main{
+        flex-direction: column;
+        justify-content: center;
+    }
+    main aside{
+        margin-inline: auto;
+        margin-top: 20px;
+    }
+    main aside .daftar-bab{
+        max-width: none;
+        margin: 0;
+    }
+    main aside .daftar-bab ul{
+        flex-direction: row;
+        flex-wrap: wrap ;
+        align-content: flex-start;
+        gap: 0rem 2rem;
+    }
+    main aside .daftar-bab li{
+        font-size: 1.4rem;
+    }
+    main .main-article{
+        margin: 20px 0px 0px 0px;
+        margin-inline: auto;
+    }
+    main aside .bab-funfact{
+        margin-inline: auto;
+        max-width: 600px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 760px){
+    img{
+        max-width: 200px;
+    }
+    main .main-article ul{
+        flex-wrap: wrap;
+    }
+    footer{
+        flex-wrap: wrap;
+    }
+    footer .social-media ul{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 430px){
+    header.navbar-container .nav-list ul{
+        padding: 0;
+        gap: 0;
+    }
+    header.navbar-container .nav-list li a{
+        font-size: 1.2rem;
+    }
+    main .main-article{
+        max-width: 300px;
+    }
 }

@@ -92,7 +92,7 @@ main aside .profile .dev-image{
 }
 
 main aside .profile .dev-image img{
-    max-width: 300px;
+    width: 250px;
 }
 
 main aside .profile .social-media ul{
@@ -116,4 +116,40 @@ footer{
     padding: 1rem;
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+    header.navbar-container .nav-list ul{
+        flex-wrap: wrap;
+    }
+    header.navbar-container .nav-list li a{
+        padding: 1rem 0.2rem;
+        font-size: 1.2rem;
+    }
+    main{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    main article{
+        margin: 0;
+    }
+    main aside{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header.navbar-container .logo img{
+        display: none;
+    }
+    header.navbar-container .nav-list ul{
+        padding: 0;
+    }
+    main aside .profile .dev-image img{
+        width: 180px;
+    }
+    main aside .profile .social-media ul li{
+        padding: 0;
+        list-style-type: none;
+    }
 }
