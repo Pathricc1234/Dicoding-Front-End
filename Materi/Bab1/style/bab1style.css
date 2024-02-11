@@ -92,24 +92,8 @@ main{
     border-radius: 20px;
 }
 
-.img{
-    display: flex;
-    justify-content: center;
-}
-
-.img img{
-    width: 300px;
-    border-radius: 20px;
-}
-
-.exp-img{
-    display: flex;
-    justify-content: center;
-}
-
-.exp-img img{
-    width: 250px;
-    border-radius: 20px;
+.equation-spec{
+    font-size: 2em;
 }
 
 /*Ilustrasi*/
@@ -157,9 +141,14 @@ main{
     border-radius: 10px 0px 0px 0px;
 }
 
-.exp-p{
+.exp-ilus p{
     font-size: 1.1em;
     padding-left: 20px;
+}
+
+.exp-ilus li{
+    display: none;
+    flex-direction: column;
 }
 
 .ilus-img{
@@ -174,16 +163,6 @@ main{
 }
 
 /*EGJ*/
-.egj-eximg, .egj-prob{
-    display: flex;
-    justify-content: center;
-}
-
-.egj-eximg img, .egj-prob img{
-    width: 400px;
-    border-radius: 20px;
-}
-
 .ilustrasi-metode-gauss-jordan ul #sixth-gj{
     border-radius: 0px 10px 0px 0px;
 }
@@ -370,5 +349,14 @@ footer{
     }
     .main-article{
         max-width: 300px;
+    }
+    .equation-spec{
+        font-size: 1.5rem;
+    }
+    .equation{
+        font-size: 1.2rem;
+    }
+    .matrices{
+        font-size: 0.85rem;
     }
 }

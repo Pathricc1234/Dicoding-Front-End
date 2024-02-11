@@ -21,7 +21,6 @@
         </head>
         <body>
             <!--Javascript-->
-            <script src="script/hashtable.js"></script>
             <script src="script/ilust.js"></script>
             <header class="navbar-container">
                 <div class="logo">
@@ -58,9 +57,12 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, quia sequi. Quos voluptates fugiat dolorum repellendus, accusamus alias deserunt quas sit voluptatum soluta impedit! Quos omnis ducimus explicabo? Recusandae, asperiores.
                         </p>
-                        <div class="img">
-                            <!--Bentuk Dasar Persamaan Linier-->
-                            <img src="img/standard-form.png" alt="Bentuk Dasar Persamaan Linier">
+                        <div class="equation-spec">
+                            \[
+                            \begin{align*}
+                            ax + by &= c
+                            \end{align*}
+                            \]
                         </div>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, dignissimos. Aut voluptates dolorum molestias ratione dolor. Dolorem dignissimos iusto aperiam amet porro autem! Quaerat ipsam voluptatibus inventore consequatur, perferendis dicta.
@@ -73,8 +75,13 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus praesentium recusandae aut iure quo quae quidem nam asperiores, cum nostrum aperiam officiis provident nisi minus aliquid deleniti at nobis nulla!
                         </p>
                         <!--Gambar Contoh Soal-->
-                        <div class="exp-img">
-                            <img src="img/simp-eq.png" alt="Example Problem">
+                        <div class="equation-spec">
+                            \[
+                            \begin{align*}
+                            3x + 2y &= 10 \\
+                            -2x + 4y &= 8
+                            \end{align*}
+                            \]
                         </div>
                         <!--List dari Metode-->
                         <div class="solusi-eliminasi">
@@ -85,17 +92,55 @@
                             </p>
                             <!--Ilustrasi Metode Eliminasi-->
                             <div class="ilustrasi-metode-eliminasi">
-                                <ul>
+                                <ul class="elim-method">
                                     <li id="first-elim">Menyamakan Koefisien</li>
                                     <li id="second-elim">Eliminasi</li>
                                     <li id="third-elim">Subtitusi</li>
                                 </ul>
                                 <!--Penjelasan Ilustrasi-->
-                                <p id="exp-elim" class="exp-p">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos ea minus dolor perspiciatis nihil impedit in, itaque eum laborum quisquam aspernatur consequatur odit veritatis? Facilis iste dicta consequatur cumque.
-                                </p>
-                                <div class="ilus-img">
-                                    <img src="" alt="Ilustrasi Metode Eliminasi">
+                                <div class="exp-ilus">
+                                    <ul class="exp-elim">
+                                        <li class="menyamakan-koefisien">
+                                            <p>
+                                                Dalam persamaan pertama, kita mengalikan dengan dua pada persamaan pertama agar koefisien y pada persamaan pertama menjadi sama dengan koefisien y pada persamaan kedua
+                                            </p>
+                                            <div class="equation">
+                                                \[
+                                                \begin{align*}
+                                                6x + 4y &= 20 \\
+                                                -2x + 4y &= 8 
+                                                \end{align*}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li class="eliminasi">
+                                            <p>
+                                                Setelah itu, kita akan mengeliminasi variabel dengan mengurangkannya, variabel yang tersisa kemudian akan memberikan salah satu solusi
+                                            </p>
+                                            <div class="equation">
+                                                \[
+                                                \begin{align*}
+                                                8x &= 12 \\
+                                                x &= \frac{3}{2} 
+                                                \end{align*}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li class="subtitusi">
+                                            <p>
+                                                Dengan menggunakan salah satu solusi yang telah diperoleh, langkah terakhir adalah melakukan substitusi untuk mendapatkan nilai variabel lainnya
+                                            </p>
+                                            <div class="equation">
+                                                \[
+                                                \begin{align*}
+                                                3(\frac{3}{2}) + 4y &= 10 \\
+                                                4y &= 10 - \frac{9}{2} \\
+                                                y &= \frac{11}{4}
+                                                \end{align*}
+                                                \]
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -107,17 +152,39 @@
                             </p>
                             <!--Ilustrasi Dari Metode Grafik-->
                             <div class="ilustrasi-metode-grafik">
-                                <ul>
+                                <ul class="graph-method">
                                     <li id="first-graph">Titik Potong</li>
                                     <li id="second-graph">Membuat Grafik</li>
                                     <li id="third-graph">Mengimpretasikan</li>
                                 </ul>
                                 <!--Penjelasan Ilustrasi-->
-                                <p id="exp-graph" class="exp-p">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, voluptatibus minus! Quasi tenetur omnis, commodi voluptatibus porro cupiditate non. Consequatur placeat vero aperiam quam. Ratione voluptatum voluptas quaerat id obcaecati.
-                                </p>
-                                <div class="ilus-img">
-                                    <img src="" alt="Ilustrasi Metode Grafik">
+                                <div class="exp-ilus">
+                                    <ul class="exp-graph">
+                                        <li>
+                                            <p>
+                                                Pertama, kita mencari titik potong untuk kedua sumbu x dan y, sehingga kita bisa memiliki titik yang menghubungkan kedua garis sehingga persamaannya menjadi lebih akurat
+                                            </p>
+                                            <div class="ilus-img">
+                                                <img src="img/grafik/point.png" alt="Titik Potong">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Setelah mendapatkan kedua titik, kita menandainya pada koordinat kartesian, langkah berikutnya adalah menghubungkan kedua titik tersebut untuk membentuk sebuah garis persamaan linear
+                                            </p>
+                                            <div class="ilus-img">
+                                                <img src="img/grafik/graph.png" alt="Titik Potong">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Terakhir, kita mencari titik potong dari kedua grafik dan mencatat hasilnya untuk mendapatkan solusi
+                                            </p>
+                                            <div class="ilus-img">
+                                                <img src="img/grafik/result.png" alt="Titik Potong">
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -128,8 +195,14 @@
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto omnis dolor molestiae aperiam repudiandae accusantium, iure quibusdam debitis suscipit similique eaque incidunt harum voluptatibus sit quis fuga minima quidem earum.
                             </p>
                             <!--Masalah EGJ-->
-                            <div class="egj-eximg">
-                                <img src="img/egj-eq.png" alt="ontoh Masalah Eliminasi Gauss-Jordan">
+                            <div class="equation-spec">
+                                \[
+                                \begin{align*}
+                                x + y + 2z &= 8 \\
+                                -x - 2y + 3z &= 1 \\
+                                3x - 7y + 4z &= 10
+                                \end{align*}
+                                \]
                             </div>
                         </div>
                     </article>
@@ -140,8 +213,14 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur odio debitis necessitatibus sint! Unde ipsa, cupiditate, saepe molestias sed facilis facere culpa, maxime odio alias asperiores. Exercitationem assumenda illo officiis!
                         </p>
                         <!--Masalah EGJ-->
-                        <div class="egj-prob">
-                            <img src="img/egj-eq.png" alt="Contoh Masalah Eliminasi Gauss-Jordan">
+                        <div class="equation-spec">
+                            \[
+                            \begin{align*}
+                            x + y + 2z &= 8 \\
+                            -x - 2y + 3z &= 1 \\
+                            3x - 7y + 4z &= 10
+                            \end{align*}
+                            \]
                         </div>
                         <!--Jelasin Perbedaan EG dan EGJ-->
                         <p>
@@ -156,7 +235,7 @@
                             </p>
                             <!--Ilustrasi-->
                             <div class="ilustrasi-metode-gauss">
-                                <ul>
+                                <ul class="eg-method">
                                     <!--Operasi dapat disesuaikan sesuai kompleksitas soal-->
                                     <li id="first-g">Bentuk Matriks</li>
                                     <li id="second-g">Operasi 1</li>
@@ -165,11 +244,111 @@
                                     <li id="fifth-g">Subtitusi</li>
                                 </ul>
                                 <!--Penjelasan Ilustrasi Metode Gauss-->
-                                <p id="exp-eg" class="exp-p">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dolor voluptatibus quasi odio beatae earum nostrum, aperiam perspiciatis dolore unde veritatis magnam blanditiis ipsa, iusto, corrupti quod quia quos maiores!
-                                </p>
-                                <div class="eg-ilus-img">
-                                    <img src="" alt="Ilustrasi Metode Gauss">
+                                <div class="exp-ilus">
+                                    <ul class="exp-gauss">
+                                        <li>
+                                            <p>
+                                                Pertama adalah mengubah bentuk persamaan menjadi bentuk matriks
+                                            </p>
+                                            <div class="matrices">
+                                                \[
+                                                \begin{array}{@{}l@{}}
+                                                \left[
+                                                \begin{array}{ccc|c}
+                                                    1 & 1 & 2 & 8 \\
+                                                    -1 & -2 & 3 & 1 \\
+                                                    3 & -7 & 4 & 10
+                                                \end{array}
+                                                \right]
+                                                \end{array}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Kemudian kita lihat baris pertama, untuk baris pertama dan kolom pertama sudah bernilai satu maka tidak perlu operasi pembagian, setelah itu kita tambah baris kedua dengan baris pertama dan baris ketiga dikurang dengan tiga kali baris pertama
+                                            </p>
+                                            <div class="matrices">
+                                                \[
+                                                \xrightarrow{b2+b1, b3-3b1}
+                                                \begin{array}{@{}l@{}}
+                                                \left[
+                                                \begin{array}{ccc|c}
+                                                    1 & 1 & 2 & 8 \\
+                                                    0 & -1 & 5 & 9 \\
+                                                    0 & -10 & -2 & -14
+                                                \end{array}
+                                                \right]
+                                                \end{array}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Selanjutnya, karena baris dua dan kolom kedua bukan bernilai satu maka kita kali negatif satu agar hasilnya menjadi satu
+                                            </p>
+                                            <div class="matrices">
+                                                \[
+                                                \xrightarrow{-b2}
+                                                \begin{array}{@{}l@{}}
+                                                \left[
+                                                \begin{array}{ccc|c}
+                                                    1 & 1 & 2 & 8 \\
+                                                    0 & 1 & -5 & -9 \\
+                                                    0 & -10 & -2 & -14
+                                                \end{array}
+                                                \right]
+                                                \end{array}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Karena baris kedua dan kolom kedua sudah bernilai satu maka selanjutnya adalah menambahkan baris ketiga dengan sepuluh kali baris kedua
+                                            </p>
+                                            <div class="matrices">
+                                                \[
+                                                \xrightarrow{b3 + 10b2}
+                                                \begin{array}{@{}l@{}}
+                                                \left[
+                                                \begin{array}{ccc|c}
+                                                    1 & 1 & 2 & 8 \\
+                                                    0 & 1 & -5 & -9 \\
+                                                    0 & 0 & -52 & -104
+                                                \end{array}
+                                                \right]
+                                                \end{array}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Terakhir adalah mencari nilai z pada baris ketiga, kemudian mencari nilai y dengan mensubtitusikan nilai z ke persamaan baris kedua, dan terakhir mencari nilai x dengan mensubtitusikan nilai y dan z ke persamaan baris satu
+                                            </p>
+                                            <div class="equation">
+                                                \[
+                                                \begin{align*}
+                                                -52z &= -104 \\
+                                                z &= 2 
+                                                \end{align*}
+                                                \]
+                                                \[
+                                                \begin{align*}
+                                                y - 5z &= -9 \\
+                                                y - 5(2) &= -9 \\
+                                                y &= 1
+                                                \end{align*}
+                                                \]
+                                                \[
+                                                \begin{align*}
+                                                x + y + 2z &= 8 \\
+                                                x + 1 - 2(2) &= 8 \\
+                                                x &= 3
+                                                \end{align*}
+                                                \]
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +359,7 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci laboriosam dolor, fugit officia vero modi, blanditiis iure qui id ut dolorem consequuntur ad voluptate ducimus accusantium aspernatur, architecto repellendus.
                             </p>
                             <div class="ilustrasi-metode-gauss-jordan">
-                                <ul>
+                                <ul class="egj-method">
                                     <!--Operasi dapat disesuaikan sesuai kompleksitas soal-->
                                     <li id="first-gj">Bentuk Matriks</li>
                                     <li id="second-gj">Operasi 1</li>
@@ -190,11 +369,122 @@
                                     <li id="sixth-gj">Operasi 5</li>
                                 </ul>
                                 <!--Penjelasan Ilustrasi Metode Gauss Jordan-->
-                                <p id="exp-egj" class="exp-p">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dolor voluptatibus quasi odio beatae earum nostrum, aperiam perspiciatis dolore unde veritatis magnam blanditiis ipsa, iusto, corrupti quod quia quos maiores!
-                                </p>
-                                <div class="egj-ilus-img">
-                                    <img src="" alt="Ilustrasi Metode Gauss">
+                                <div class="exp-ilus">
+                                    <ul class="exp-gj">
+                                        <li>
+                                            <p>
+                                                Pertama adalah mengubah bentuk persamaan menjadi bentuk matriks
+                                            </p>
+                                            <div class="matrices">
+                                                \[
+                                                \begin{array}{@{}l@{}}
+                                                \left[
+                                                \begin{array}{ccc|c}
+                                                    1 & 1 & 2 & 8 \\
+                                                    -1 & -2 & 3 & 1 \\
+                                                    3 & -7 & 4 & 10
+                                                \end{array}
+                                                \right]
+                                                \end{array}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Kemudian kita lihat baris pertama, untuk baris pertama dan kolom pertama sudah bernilai satu maka tidak perlu operasi pembagian, setelah itu kita tambah baris kedua dengan baris pertama dan baris ketiga dikurang dengan tiga kali baris pertama
+                                            </p>
+                                            <div class="matrices">
+                                                \[
+                                                \xrightarrow{b2+b1, b3-3b1}
+                                                \begin{array}{@{}l@{}}
+                                                \left[
+                                                \begin{array}{ccc|c}
+                                                    1 & 1 & 2 & 8 \\
+                                                    0 & -1 & 5 & 9 \\
+                                                    0 & -10 & -2 & -14
+                                                \end{array}
+                                                \right]
+                                                \end{array}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Selanjutnya, karena baris dua dan kolom kedua bukan bernilai satu maka kita kali negatif satu agar hasilnya menjadi satu
+                                            </p>
+                                            <div class="matrices">
+                                                \[
+                                                \xrightarrow{-b2}
+                                                \begin{array}{@{}l@{}}
+                                                \left[
+                                                \begin{array}{ccc|c}
+                                                    1 & 1 & 2 & 8 \\
+                                                    0 & 1 & -5 & -9 \\
+                                                    0 & -10 & -2 & -14
+                                                \end{array}
+                                                \right]
+                                                \end{array}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Kemudian, baris pertama dikurangi dengan baris kedua, dan baris ketiga ditambah dengan sepuluh kali baris kedua
+                                            </p>
+                                            <div class="matrices">
+                                                \[
+                                                \xrightarrow{-b3+10b2, b1-b2}
+                                                \begin{array}{@{}l@{}}
+                                                \left[
+                                                \begin{array}{ccc|c}
+                                                    1 & 0 & 7 & 17 \\
+                                                    0 & 1 & -5 & -9 \\
+                                                    0 & 0 & -52 & -104
+                                                \end{array}
+                                                \right]
+                                                \end{array}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Karena baris dan kolom ketiga bukan bernilai satu maka kita bagi dengan negatif 52 agar nilainya menjadi satu
+                                            </p>
+                                            <div class="matrices">
+                                                \[
+                                                \xrightarrow{\frac{-b3}{52}}
+                                                \begin{array}{@{}l@{}}
+                                                \left[
+                                                \begin{array}{ccc|c}
+                                                    1 & 0 & 7 & 17 \\
+                                                    0 & 1 & -5 & -9 \\
+                                                    0 & 0 & 1 & 2
+                                                \end{array}
+                                                \right]
+                                                \end{array}
+                                                \]
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Setelah kolom dan baris ketiga bernilai satu maka langkah terakhir adalah mengurangi baris satu dengan baris tujuh kali baris ketiga dan menambahkan baris kedua dengan lima kali baris ketiga, dan hasil yang didapatkan tidak perlu subtitusi
+                                            </p>
+                                            <div class="matrices">
+                                                \[
+                                                \xrightarrow{b1-7b3,b2+5b3}
+                                                \begin{array}{@{}l@{}}
+                                                \left[
+                                                \begin{array}{ccc|c}
+                                                    1 & 0 & 0 & 3 \\
+                                                    0 & 1 & 0 & 1 \\
+                                                    0 & 0 & 1 & 2
+                                                \end{array}
+                                                \right]
+                                                \end{array}
+                                                \]
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -212,7 +502,7 @@
                     <article class="latsol">
                     <h2>Latihan Soal</h2>
                     <p>Latihan Soal berupa 2 soal pilihan ganda dan 2 soal essay. Latihan ini tidak memiliki sistem benar atau salah, melainkan menggunakan pembahasan. Pencet tombol plus untuk melihat pembahasan.</p>
-                    <div class="pg-1">
+                    <div class="soal">
                         <div class="soal-pg-1">
                             <h3>Pilihan Ganda 1 </h3>
                             <p>Cari nilai a,b,dan c menggunakan Gauss-Jordan</p>
@@ -338,7 +628,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="pg-2">
+                    <div class="soal">
                         <div class="soal-pg-2">
                             <h3>Pilihan Ganda 2</h3>
                             <p>Cari nilai X<sub>1</sub>,X<sub>2</sub>,dan X<sub>3</sub> menggunakan Gauss-Jordan</p>
@@ -483,7 +773,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="es-1">
+                    <div class="soal">
                         <div class="soal-ess-1">
                             <h3>Essai 1</h3>
                             <p>Cari nilai x,y,z,dan w menggunakan Gauss-Jordan</p>
@@ -583,7 +873,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="es-2">
+                    <div class="soal">
                         <div class="soal-p">
                             <h3>Essai 2</h3>
                             <p>Cari harga dari perunggu, tembaga, dan besi per kilogram menggunakan Gauss-Jordan</p>
