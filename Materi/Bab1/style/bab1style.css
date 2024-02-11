@@ -92,15 +92,16 @@ main{
     border-radius: 20px;
 }
 
+.main-article p, .main-article li, .main-article h4{
+    font-size: 1.1rem;
+}
+
 .equation-spec{
     font-size: 2em;
 }
 
 /*Ilustrasi*/
-.ilustrasi-metode-eliminasi,
-.ilustrasi-metode-grafik,
-.ilustrasi-metode-gauss,
-.ilustrasi-metode-gauss-jordan{
+.ilustrasi{
     border-radius: 10px;
     background-color: #222831;
     color: #EEEEEE;
@@ -108,10 +109,7 @@ main{
     flex-direction: column;
 }
 
-.ilustrasi-metode-eliminasi ul,
-.ilustrasi-metode-grafik ul,
-.ilustrasi-metode-gauss ul,
-.ilustrasi-metode-gauss-jordan ul{
+.ilustrasi ul{
     padding: 0;
     margin: 0;
     display: flex;
@@ -119,26 +117,22 @@ main{
     justify-content: flex-start;
 }
 
-.ilustrasi-metode-eliminasi ul li,
-.ilustrasi-metode-grafik ul li,
-.ilustrasi-metode-gauss ul li,
-.ilustrasi-metode-gauss-jordan ul li{
+.ilustrasi ul li{
     padding: 0.5rem 1rem;
     list-style-type: none;
 }
 
-.ilustrasi-metode-eliminasi ul li:hover,
-.ilustrasi-metode-grafik ul li:hover,
-.ilustrasi-metode-gauss ul li:hover,
-.ilustrasi-metode-gauss-jordan ul li:hover{
+.ilustrasi > ul:first-child li:hover{
     cursor: pointer;
+    background-color: #393E46;
 }
 
-.ilustrasi-metode-eliminasi ul #first-elim,
-.ilustrasi-metode-grafik ul #first-graph,
-.ilustrasi-metode-gauss ul #first-g,
-.ilustrasi-metode-gauss-jordan ul #first-gj{
+#first{
     border-radius: 10px 0px 0px 0px;
+}
+
+#sixth{
+    border-radius: 0px 10px 0px 0px;
 }
 
 .exp-ilus p{
@@ -162,27 +156,8 @@ main{
     border-radius: 20px;
 }
 
-/*EGJ*/
-.ilustrasi-metode-gauss-jordan ul #sixth-gj{
-    border-radius: 0px 10px 0px 0px;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss .eg-ilus-img,
-main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan .egj-ilus-img{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-main .main-article .egj .elim-gauss .ilustrasi-metode-gauss .eg-ilus-img img,
-main .main-article .egj .elim-gauss-jordan .ilustrasi-metode-gauss-jordan .egj-ilus-img img{
-    width: 400px;
-    border-radius: 20px;
-}
-
 /*Latihan Soal  */
-main .main-article .latsol > div{
+.latsol > div{
     font-size: 1.1em;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -239,6 +214,10 @@ main .main-article .latsol > div{
     border: 2px solid #222831;
     border-radius: 10px;
     background-color: #222831;
+}
+
+.quiz-btn:hover{
+    cursor: pointer;
 }
 
 /*Fun Fact*/
@@ -331,6 +310,9 @@ footer{
     .main-article ul{
         flex-wrap: wrap;
     }
+    #sixth{
+        border-radius: 0px;
+    }
     footer{
         flex-wrap: wrap;
     }
@@ -354,9 +336,9 @@ footer{
         font-size: 1.5rem;
     }
     .equation{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .matrices{
-        font-size: 0.85rem;
+        font-size: 0.76rem;
     }
 }

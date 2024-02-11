@@ -12,7 +12,7 @@ body{
     flex-direction: column;
 }
 
-header.navbar-container{
+.navbar-container{
     width: 100%;
     max-width: 1200px;
     background-color: #222831;
@@ -22,21 +22,21 @@ header.navbar-container{
     align-items: center;
 }
 
-header.navbar-container .logo img{
+.logo img{
     width: 50px;
 }
 
-header.navbar-container .nav-list ul {
+.nav-list ul {
     display: flex;
     justify-content: center;
     gap: 3rem 2rem;
 }
 
-header.navbar-container .nav-list li {
+.nav-list li {
     list-style-type: none;
 }
 
-header.navbar-container .nav-list li a{
+.nav-list li a{
     padding: 1rem 1.5rem;
     text-decoration: none;
     font-size: 1.5rem;
@@ -44,7 +44,7 @@ header.navbar-container .nav-list li a{
     transition: all 0.3s ease-in-out;
 }
 
-header.navbar-container .nav-list li:hover a{
+.nav-list li:hover a{
     background-color: #393E46;
 }
 
@@ -66,47 +66,47 @@ main article{
     background-color: #393E46;
 }
 
-main article .introduction-image{
+.introduction-image{
     display: flex;
     justify-content: center;
 }
 
-main article .introduction-image img{
+.introduction-image img{
     width: 210px;
 }
 
-main aside .profile{
+.profile{
     margin-top: 20px;
     padding: 10px;
     background-color: #393E46;
     border-radius: 20px;
 }
 
-main aside .profile h3,h4{
+.profile h3,.profile h4{
     text-align: center;
 }
 
-main aside .profile .dev-image{
+.dev-image{
     display: flex;
     justify-content: center;
 }
 
-main aside .profile .dev-image img{
+.dev-image img{
     width: 250px;
 }
 
-main aside .profile .social-media ul{
+.social-media ul{
     display: flex;
     flex-direction: column;
 }
 
-main aside .profile .social-media ul li{
+.social-media ul li{
     color: #EEEEEE;
     padding: 0.3rem 1rem;
     list-style-type: none;
 }
 
-main aside .profile .social-media ul li a{
+.social-media ul li a{
     color: #EEEEEE;
     text-decoration: none;
 }
